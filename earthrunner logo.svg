@@ -14,5 +14,6 @@
 	</g>
 </g>
 <polygon fill="none" points="293.5,149 186.328,149 185.5,119 292.672,119 "/>
-<text transform="matrix(1 0 0 1 185.6948 126.0601)"><tspan x="0" y="0" font-family="'SourceCodePro-Semibold'" font-size="10">TARGET: PETROL </tspan><tspan x="0.331" y="12" font-family="'SourceCodePro-Semibold'" font-size="10">INFRASTRUCTURE</tspan></text>
+<text transform="matrix(1 0 0 1 185.6948 126.0601)" font-family="'SourceCodePro-Semibold'" font-size="10">TARGET: PETROL </text>
+<text transform="matrix(1 0 0 1 186.0258 138.0601)" font-family="'SourceCodePro-Semibold'" font-size="10">INFRASTRUCTURE</text>
 </svg>
