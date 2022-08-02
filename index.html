@@ -4,113 +4,128 @@
 <head>
     <!-- styles coming from style.css via link tag-->
     <link rel="stylesheet" href="./style.css" />
-
-    <style>
-        /* add more styles here! */
-    </style>
 </head>
 
-<body style="height: 700vh; background-color: white; font-family:Source Code Pro">
-    <div style="position: sticky; top: 20px; display: flex; justify-content: center;">
-        <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 17.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="792px" height="612px" viewBox="0 0 792 612" enable-background="new 0 0 792 612" xml:space="preserve">
-<g id="XMLID_1_">
-	<g>
-		<polygon fill="#00FF00" points="214,133 214,124 214,112 300,112 321,133 		"/>
-		<polygon fill="#FFFFFF" points="214,133 321,133 346.5,133 613,133 639,151 639,488 214,488 		"/>
-	</g>
-	<g>
-		<polyline fill="none" stroke="#00FF00" stroke-width="6" stroke-miterlimit="10" points="346.5,133 613,133 639,151 639,488 
-			214,488 214,133 214,124 214,112 300,112 321,133 		"/>
-		<polyline fill="none" stroke="#00FF00" stroke-width="6" stroke-miterlimit="10" points="214,133 321,133 346.5,133 		"/>
-	</g>
-</g>
-<polygon fill="none" points="475,142 216,142 214,112 473,112 "/>
-<text transform="matrix(1 0 0 1 214.4702 119.0601)"><tspan x="0" y="0" font-family="'SourceCodePro-Semibold'" font-size="10">TARGET: PETROL </tspan><tspan x="0.8" y="12" font-family="'SourceCodePro-Semibold'" font-size="10">INFRASTRUCTURE</tspan></text>
-</svg>
-
-<img src="./earthrunner-logo.svg" width="400px" /> -->
-</div>
-    <div class="dm1">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt cupiditate sit magnam exercitationem fugiat quidem laudantium ad corporis dolor consequatur.</p>
-      </div>
 <body>
-    <div id="chartdiv"></div> -->
-    <script src="https://www.amcharts.com/lib/4/core.js"></script>
-    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
-    <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <header>
+        <h1>EARTHRUNNER</h1>
+    </header>
+    
+    <div id="wrapper"> 
+        <div id="globe"></div>
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="792px" height="612px" viewBox="0 0 792 612" enable-background="new 0 0 792 612"
+            xml:space="preserve">
+            <g id="XMLID_1_">
+                <g>
+                    <g id="XMLID_2_">
+                        <g>
+                            <polygon fill="#00FF00" points="316,139 308.5,139 315.96,138.97 				" />
+                            <polygon fill="#00FF00" points="315.96,138.97 308.5,139 286.5,118 				" />
+                            <polygon fill="#D4FF00" points="308.5,139 183.5,139 183.5,130 183.5,118 286.5,118 				" />
+                        </g>
+                        <g>
+                            <polyline fill="none" stroke="#D4FF00" stroke-miterlimit="10"
+                                points="286.5,118 315.96,138.97 316,139 				" />
+                            <polygon fill="none" stroke="#D4FF00" stroke-width="6" stroke-miterlimit="10" points="308.5,139 315.96,138.97 561.5,138.06 
+                       608.5,174.5 608.5,494 183.5,494 183.5,139 183.5,130 183.5,118 286.5,118 				" />
+                            <polyline fill="none" stroke="#D4FF00" stroke-width="6" stroke-miterlimit="10"
+                                points="183.5,139 308.5,139 316,139 				" />
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <polygon fill="none" points="293.5,149 186.328,149 185.5,119 292.672,119 " />
+            <text transform="matrix(1 0 0 1 185.6948 126.0601)" font-family="'SourceCodePro-Semibold'"
+                font-size="10">TARGET: PETROL </text>
+            <text transform="matrix(1 0 0 1 186.0258 138.0601)" font-family="'SourceCodePro-Semibold'"
+                font-size="10">INFRASTRUCTURE</text>
+        </svg>
+    </div>
+    
 
-    <script>
-        /**
- * ---------------------------------------
- * This demo was created using amCharts 4.
- * 
- * For more information visit:
- * https://www.amcharts.com/
- * 
- * Documentation is available at:
- * https://www.amcharts.com/docs/v4/
- * ---------------------------------------
- */
-
-        // Themes begin
-        am4core.useTheme(am4themes_animated);
-        // Themes end
-
-        var chart = am4core.create("chartdiv", am4maps.MapChart);
-
-        // Set map definition
-        chart.geodata = am4geodata_worldLow;
-
-        // Set projection
-        chart.projection = new am4maps.projections.Orthographic();
-        chart.panBehavior = "rotateLongLat";
-        chart.deltaLatitude = -20;
-        chart.padding(20, 20, 20, 20);
-
-        // Create map polygon series
-        var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
-
-        // Make map load polygon (like country names) data from GeoJSON
-        polygonSeries.useGeodata = true;
-        //polygonSeries.include = ["BR", "UA", "MX", "CI"];
-
-        // Configure series
-        var polygonTemplate = polygonSeries.mapPolygons.template;
-        polygonTemplate.tooltipText = "{name}";
-        polygonTemplate.fill = am4core.color("#FF6633");
-        polygonTemplate.stroke = am4core.color("#000033");
-        polygonTemplate.strokeWidth = 0.5;
-        polygonTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
-        polygonTemplate.url = "https://www.datadrum.com/main.php?package={id}";
-        polygonTemplate.urlTarget = "_blank";
-
-        var graticuleSeries = chart.series.push(new am4maps.GraticuleSeries());
-        graticuleSeries.mapLines.template.line.stroke = am4core.color("#ffffff");
-        graticuleSeries.mapLines.template.line.strokeOpacity = 0.08;
-        graticuleSeries.fitExtent = false;
-
-
-        chart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 0.1;
-        chart.backgroundSeries.mapPolygons.template.polygon.fill = am4core.color("#ffffff");
-
-        // Create hover state and set alternative fill color
-        var hs = polygonTemplate.states.create("hover");
-        hs.properties.fill = chart.colors.getIndex(0).brighten(-0.5);
-
-        let animation;
-        setTimeout(function () {
-            animation = chart.animate({ property: "deltaLongitude", to: 100000 }, 20000000);
-        }, 3000)
-
-        chart.seriesContainer.events.on("down", function () {
-            //  animation.stop();
-        })
-    </script>
-</body>
+    </body>
 
 </html>
+<script src="https://unpkg.com/three@0.131.2/build/three.min.js"></script>
+<script>
+    //boilerplate for three.js :)
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(1000, 1000);
+    //fetch html element
+    const container = document.querySelector('#globe');
+    //append three js dom 
+    container.appendChild(renderer.domElement);
+    //boiler plate over
+
+    // create geometry
+    const geometry = new THREE.SphereGeometry(1, 20, 20);
+    SphereToQuads(geometry)
+    //create material
+    const material = new THREE.LineBasicMaterial({ color: 0xffff00 });
+    //create three js object from geometry and material
+    const cube = new THREE.LineSegments(geometry, material);
+    //add scene
+    scene.add(cube);
+
+    camera.position.z = 5;
+
+    // animate happens every frame, tries to do it 60 fps
+    function animate() {
+        requestAnimationFrame(animate);
+
+        //rotates cube
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+
+        //render
+        renderer.render(scene, camera);
+    }
+
+    function SphereToQuads(g) {
+        let p = g.parameters;
+        let segmentsX = p.widthSegments;
+        let segmentsY = p.heightSegments - 2;
+        let mainShift = segmentsX + 1;
+        let indices = [];
+        for (let i = 0; i < segmentsY + 1; i++) {
+            let index11 = 0;
+            let index12 = 0;
+            for (let j = 0; j < segmentsX; j++) {
+                index11 = (segmentsX + 1) * i + j;
+                index12 = index11 + 1;
+                let index21 = index11;
+                let index22 = index11 + (segmentsX + 1);
+                indices.push(index11 + mainShift, index12 + mainShift);
+                if (index22 < ((segmentsX + 1) * (segmentsY + 1) - 1)) {
+                    indices.push(index21 + mainShift, index22 + mainShift);
+                }
+            }
+            if ((index12 + segmentsX + 1) <= ((segmentsX + 1) * (segmentsY + 1) - 1)) {
+                indices.push(index12 + mainShift, index12 + segmentsX + 1 + mainShift);
+            }
+        }
+
+        let lastIdx = indices[indices.length - 1] + 2;
+
+        // poles
+        for (let i = 0; i < segmentsX; i++) {
+            //top
+            indices.push(i, i + mainShift, i, i + mainShift + 1);
+
+            // bottom
+            let idx = lastIdx + i;
+            let backShift = mainShift + 1;
+            indices.push(idx, idx - backShift, idx, idx - backShift + 1);
+        }
+
+        g.setIndex(indices);
+    }
+
+    // another boilerplate line, starts the game loop
+    animate();
+
+</script>

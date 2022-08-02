@@ -1,0 +1,24 @@
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="792px" height="612px" viewBox="0 0 792 612" enable-background="new 0 0 792 612" xml:space="preserve">
+<g id="XMLID_1_">
+	<g>
+		<g id="XMLID_2_">
+			<g>
+				<polygon fill="#00FF00" points="316,139 308.5,139 315.96,138.97 				"/>
+				<polygon fill="#00FF00" points="315.96,138.97 308.5,139 286.5,118 				"/>
+				<polygon fill="#D4FF00" points="308.5,139 183.5,139 183.5,130 183.5,118 286.5,118 				"/>
+			</g>
+			<g>
+				<polyline fill="none" stroke="#D4FF00" stroke-miterlimit="10" points="286.5,118 315.96,138.97 316,139 				"/>
+				<polygon fill="none" stroke="#D4FF00" stroke-width="6" stroke-miterlimit="10" points="308.5,139 315.96,138.97 561.5,138.06 
+					608.5,174.5 608.5,494 183.5,494 183.5,139 183.5,130 183.5,118 286.5,118 				"/>
+				<polyline fill="none" stroke="#D4FF00" stroke-width="6" stroke-miterlimit="10" points="183.5,139 308.5,139 316,139 				"/>
+			</g>
+		</g>
+	</g>
+</g>
+<polygon fill="none" points="293.5,149 186.328,149 185.5,119 292.672,119 "/>
+<text transform="matrix(1 0 0 1 185.6948 126.0601)" font-family="'SourceCodePro-Semibold'" font-size="10">TARGET: PETROL </text>
+<text transform="matrix(1 0 0 1 186.0258 138.0601)" font-family="'SourceCodePro-Semibold'" font-size="10">INFRASTRUCTURE</text>
+</svg>
