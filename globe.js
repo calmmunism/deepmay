@@ -22,8 +22,7 @@
     transparent: true,
 });
 
-const quaternion = new THREE.Quaternion();
-quaternion.setFromAxisAngle( new THREE.Vector3( 0, 0, 1).normalize(), -Math.PI / 6 );
+
 //cube.applyQuaternion( quaternion );
     //create three js object from geometry and material
     const cube = new THREE.LineSegments(geometry, material);
@@ -34,28 +33,51 @@ quaternion.setFromAxisAngle( new THREE.Vector3( 0, 0, 1).normalize(), -Math.PI /
     // globeMap.applyQuaternion(quaternion);
     scene.add(cube);
     scene.add(globeMap)
-    cube.rotation.x += 0.5;
-    globeMap.rotation.x += 0.5;
+    //cube.rotation.x += 0.5;
+    //globeMap.rotation.x += 0.5;
     camera.position.z = 5;
+    const quaternionTilt = new THREE.Quaternion();
+    quaternionTilt.setFromAxisAngle( new THREE.Vector3( .5, 0, .3 ).normalize(), Math.PI / 6 )
 
     // animate happens every frame, tries to do it 60 fps
+    let angle = 0;
     function animate() {
         requestAnimationFrame(animate);
-        // const quaternion = new THREE.Quaternion();
-        // quaternion.setFromAxisAngle( new THREE.Vector3( 1, 1, 0 ).normalize(), Math.PI / 400 );
-        
-        
+        cube.rotation.x = 0;
+        cube.rotation.y = 0;
+        cube.rotation.z = 0;
+        globeMap.rotation.x = 0;
+        globeMap.rotation.y = 0;
+        globeMap.rotation.z = 0;
+       
         //rotates cube
-        // cube.applyQuaternion( quaternion );
-        // globeMap.applyQuaternion( quaternion);
-        cube.rotation.x += 0.0;
-        cube.rotation.y += 0.01;
-        globeMap.rotation.x += 0.0;
-        globeMap.rotation.y += 0.01;
+        angle += .01
+        const quaternionRotate = new THREE.Quaternion();
+        quaternionRotate.setFromAxisAngle( new THREE.Vector3( 0, 1, 0).normalize(), angle );
+
+
+        cube.applyQuaternion(quaternionRotate);
+        cube.applyQuaternion( quaternionTilt );
+        globeMap.applyQuaternion(quaternionRotate);
+        globeMap.applyQuaternion( quaternionTilt );  
+
+        // broken function
+        // spinWorld(cube);
+        // spinWorld(globeMap);
+
 
         //render
         renderer.render(scene, camera);
     }
+
+    // Broken function
+    // function spinWorld(geometry) {
+    //     geometry.rotation.x = 0;
+    //     geometry.rotation.y = 0;
+    //     geometry.rotation.z = 0;
+    //     geometry.applyQaternion(quaternionRotate);
+    //     geometry.applyQuaternion(quaternionTilt);
+    // }
 
     function SphereToQuads(g) {
         let p = g.parameters;
