@@ -8,10 +8,27 @@
 
 <body>
     <header>
-        <h1>EARTHRUNNER</h1>
+        <h1 class="cursor">EARTHRUNNER</h1>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <img src="deckimg0.svg" id="showCards" />
+
     </header>
-    
-    <div id="wrapper"> 
+    <div id="wrapper">
+        <div id="glitchy_text">
+            <script type="module"
+                src="https://cdn.jsdelivr.net/gh/darkwiiplayer/components@345d931/TypeWriter.js"></script>
+
+            <div class="container py-5">
+                <div class="output" id="output">
+                    <p></p>
+                </div>
+            </div>
+
+        </div>
         <div id="globe"></div>
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" width="792px" height="612px" viewBox="0 0 792 612" enable-background="new 0 0 792 612"
@@ -41,11 +58,40 @@
             <text transform="matrix(1 0 0 1 186.0258 138.0601)" font-family="'SourceCodePro-Semibold'"
                 font-size="10">INFRASTRUCTURE</text>
         </svg>
+
+
+        <div id="type">
+        </div>
     </div>
-    
+    <div id="cards" class="hidden">
+        <img src="/deck/E1 CAT YOUTH.png">
+        <img src="/deck/E1 dead robocops.png">
+        <img src="/deck/E1 old spice.png">
+        <img src="/deck/E1 SUNDAY FUNDAY.png">
+        <img src="/deck/E1 skate bike.png">
+    </div>
 
-    </body>
-
-</html>
+</body>
 <script src="https://unpkg.com/three@0.131.2/build/three.min.js"></script>
 <script src="./globe.js"></script>
+<script src="./raycaster.js"></script>
+<script src="./typewriter.js"></script>
+<script>
+    let showCards = document.querySelector("#showCards");
+    showCards.onclick = function () {
+        let cards = document.querySelector("#cards");
+        cards.classList.toggle('hidden');
+        //cards.classList.add('hidden');
+    }
+
+
+
+
+
+    //hover image change
+    //unclick change image
+    //open cards
+
+</script>
+
+</html>
