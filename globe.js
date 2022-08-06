@@ -82,7 +82,7 @@ function animate() {
     raycaster.setFromCamera(pointer, camera);
     const intersects = raycaster.intersectObject(globeMap);
     if (intersects.length > 0) {
-        angle += .005;
+        angle += .002;
         isOverSphere = true
     }
     else {
