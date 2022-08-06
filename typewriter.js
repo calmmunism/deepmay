@@ -69,10 +69,11 @@ let typewords = [
     "//and so when the teenage communes returned with this new science, ",
     "they had a clarity and strategic vision never seen before.",
     "",
-    // "the swarms ceased their myopic swirling dances",
-    // "and turned their energy into a ."
+    "//the swarms ceased their myopic swirling dances",
+    "and turned their energy into a seething assault",
+    "on everything choking the planet to death.",
     "",
-    "and the earthrunners were born.",
+    "and in this moment the earthrunners were born.",
 
     
 
