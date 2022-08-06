@@ -52,9 +52,9 @@ let typewords = [
     "",
     "//but when we ran these programs", 
     "on an earth-wide order of encapsulation,",
-    "we began to see faultlines in their iron cage."
+    "we began to see faultlines in their iron cage.",
     "",
-    "//a scale of coordination that hadn't been possible."
+    "//a scale of coordination that hadn't been possible.",
     "",
     "//and so in cities without airports,", 
     "a bloody battle began to be fought. ",
