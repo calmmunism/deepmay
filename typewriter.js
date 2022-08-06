@@ -6,7 +6,7 @@ let typewords = [
     "",
     "",
     "// i’ll tell you but you’ll have to forgive my tendency to embellish,",
-    "",
+    "in my current condition, the luxury of deliberation is my most cherished possession.",
     "",
     "// with every wave of struggle we lived through, ",
     "the same sets of problems arose time and time again. ",
